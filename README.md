@@ -1,8 +1,10 @@
-# IMU Attitude Monitor
+# Flight Control Lab
 
-A beginner embedded-systems project using an Arduino Uno and a GY-521 / MPU6050 inertial measurement unit (IMU).
+A growing embedded-systems and flight-control project built around sensing, orientation estimation, feedback control, and eventually small educational aerial platforms.
 
-> Repository note: the current GitHub repository name is temporary. The project itself is the IMU Attitude Monitor.
+## Current project: IMU Attitude Monitor
+
+The first stage uses an Arduino Uno and a GY-521 / MPU6050 inertial measurement unit (IMU).
 
 ## Project goal
 
@@ -60,6 +62,14 @@ This verified the chain:
 Next target:
 
 > Connect the MPU6050, confirm I2C communication, and print live acceleration data to the Serial Monitor.
+
+## Long-term progression
+
+The repository is intended to grow through increasingly advanced stages:
+
+**Arduino verification -> IMU sensing -> pitch/roll estimation -> Python visualization -> filtering -> PID control -> small quadcopter -> fixed-wing research UAV concepts**
+
+Each stage will be documented with code, test results, failures, and revisions.
 
 ## Hardware
 
