@@ -33,13 +33,33 @@ The aim is not simply to wire a sensor. I want to understand the full chain:
 
 ## Current status
 
-- Arduino Uno: available
+- Arduino Uno: **verified and programmable**
+- Arduino IDE: configured
+- Board: Arduino Uno
+- Port: COM12
+- Blink test: **successful**
 - Male-to-female jumper wires: available
 - GY-521 / MPU6050: ordered
 - Sensor expected: 10 October 2026
-- Initial Arduino test program: prepared
+- Initial Arduino IMU test program: prepared
 - Wiring plan: prepared
-- Hardware testing: pending sensor arrival
+- MPU6050 hardware testing: pending sensor arrival
+
+## Milestones
+
+### Milestone 0 - Arduino verified ✅
+
+On 6 October 2026, the Arduino Uno was detected on COM12, the Blink example was uploaded successfully, and the onboard LED responded as expected.
+
+This verified the chain:
+
+**computer -> USB serial connection -> Arduino -> compiled program -> physical output**
+
+### Milestone 1 - MPU6050 communication
+
+Next target:
+
+> Connect the MPU6050, confirm I2C communication, and print live acceleration data to the Serial Monitor.
 
 ## Hardware
 
@@ -55,20 +75,14 @@ The aim is not simply to wire a sensor. I want to understand the full chain:
 .
 ├── README.md
 ├── arduino/
+│   ├── blink_test.ino
 │   └── imu_reader.ino
 └── docs/
     ├── wiring.md
     ├── roadmap.md
+    ├── milestone-0.md
     └── project-log.md
 ```
-
-## First milestone
-
-The first milestone is deliberately simple:
-
-> Connect the MPU6050, confirm communication, and print live acceleration data to the Serial Monitor.
-
-Later milestones will add orientation estimation, visualization, filtering, and closed-loop control.
 
 ## Safety
 
