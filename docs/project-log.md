@@ -25,12 +25,55 @@ Begin learning embedded systems and flight-control fundamentals with a small IMU
 - Defined a staged learning roadmap
 - Decided to document code, tests, failures, and later improvements in GitHub
 
-### First test when the sensor arrives
+---
 
-1. Inspect the board and header pins.
+## 6 October 2026 - Milestone 0: Arduino verified
+
+### Setup
+
+- Arduino IDE installed and running
+- Arduino AVR Boards package installed
+- Board selected: Arduino Uno
+- Port verified by unplug/replug test: COM12
+
+### Test
+
+Opened the Arduino IDE built-in Blink example and uploaded it to the board.
+
+### Result
+
+**Successful.**
+
+The onboard LED blinked repeatedly after upload, confirming that the board accepted and executed the program.
+
+### What this proves
+
+```text
+Laptop
+  |
+  v
+USB / COM12
+  |
+  v
+Arduino Uno
+  |
+  v
+Compiled sketch
+  |
+  v
+Physical LED output
+```
+
+This confirms that the Arduino, USB connection, IDE configuration, board selection, serial port, bootloader, and basic program upload path are working.
+
+### Next test
+
+When the MPU6050 arrives:
+
+1. Inspect the board and soldered header pins.
 2. Wire the sensor to the Arduino with power disconnected.
-3. Install the Adafruit MPU6050, Unified Sensor, and BusIO libraries in Arduino IDE.
-4. Upload the initial test program.
+3. Install the Adafruit MPU6050, Unified Sensor, and BusIO libraries.
+4. Upload the IMU reader program.
 5. Open Serial Monitor at 115200 baud.
 6. Tilt the sensor and verify that acceleration values change.
 
